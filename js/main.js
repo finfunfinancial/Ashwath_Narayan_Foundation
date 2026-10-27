@@ -50,14 +50,17 @@
   }
 
   // The footer never reaches mid-screen, so mark Contact once at the bottom
+  function atBottom() {
+    return window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+  }
   window.addEventListener('scroll', function () {
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) markCurrent('#contact');
+    if (atBottom()) markCurrent('#contact');
   }, { passive: true });
 
   if ('IntersectionObserver' in window) {
     var navObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) markCurrent('#' + entry.target.id);
+        if (entry.isIntersecting && !atBottom()) markCurrent('#' + entry.target.id);
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(function (s) { navObserver.observe(s); });
