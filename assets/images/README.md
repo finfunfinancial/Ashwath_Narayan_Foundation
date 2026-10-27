@@ -5,7 +5,7 @@ Until a file exists, the page shows a labelled placeholder in its place.
 
 | File                     | Used in            | Suggested subject                          | Size (approx.)  |
 |--------------------------|--------------------|--------------------------------------------|-----------------|
-| `hero.jpg`               | Hero               | Students in a government-school classroom  | 1200 × 1400     |
+| `hero.webp`              | Hero               | Portrait (already added)                   | 1200 × 1200     |
 | `step-classroom.jpg`     | Featured: STEP     | Students using a digital classroom         | 1400 × 1000     |
 | `gallery-teacher.jpg`    | Impact gallery     | Teacher leading a lesson                   | 800 × 1000      |
 | `gallery-youth.jpg`      | Impact gallery     | Youth activity                             | 800 × 1000      |
